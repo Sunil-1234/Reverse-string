@@ -1,0 +1,22 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+void reverse(string s){
+// checking if string is empty simply return
+if(s.size()==0)
+return;
+//this recursive function reverse whole string except first character
+reverse(s.substr(1));
+
+// adding first character to reversed string
+cout<<s[0];
+}
+
+int main(){
+string s;
+cin>>s;
+reverse(s);
+return 0;
+}
